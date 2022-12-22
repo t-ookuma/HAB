@@ -1,0 +1,29 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Allura');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.header-custom {
+    position: relative;
+    width: 60%;
+    left: -20%;
+}
+
+.header-custom-text {
+    position: absolute;
+    top: 40%;
+    white-space: nowrap;
+}
+
+.allura {
+    font-family: "Allura";
+}
