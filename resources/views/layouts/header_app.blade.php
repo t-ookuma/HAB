@@ -18,7 +18,7 @@
 <body>
 
     <!-- header -->
-    <header class="header sticky top-0 bg-white shadow-xl flex items-center justify-between px-8 py-02">
+    <header class="z-50 header sticky top-0 bg-white shadow-xl flex items-center justify-between px-8 py-02">
 
         <h1 class="p-2">
             <img class="header-custom" src="{{ asset('images/header_logo.png') }}" alt="">
@@ -48,7 +48,7 @@
     </header>
 
     <!-- main -->
-    <main class="bg-gray-200">
+    <main class="z-10 bg-gray-200">
         @yield('content')
     </main>
 

@@ -1,7 +1,7 @@
 @extends('layouts.header_app')
 @section('content')
 
-<div class="flex min-h-screen pt-6 items-start justify-center bg-gray-200 from-teal-100 via-teal-300 to-teal-500">
+<div class="flex min-h-screen pt-6 pb-6 items-start justify-center bg-gray-200 from-teal-100 via-teal-300 to-teal-500">
     <div class="mx-auto w-full max-w-5xl rounded-lg bg-white px-10 py-8 shadow-xl">
 
         <div class="flex justify-center items-center">
@@ -14,7 +14,13 @@
                 </a>
             </div>
             <div>
-                <p class="text-center pr-4 pl-4 text-lg text-gray-800">2022年</p>
+                <div class="relative inline-flex pr-6 pl-6 ">
+                    <select class="text-center text-lg text-gray-800 hover:text-blue-600 rounded-full hover:bg-gray-50 p-1 focus:outline-none appearance-none">
+                        @foreach(\YearConst::YEAR_LIST as $key => $value)
+                        <option class=" text-gray-800" value="{{ $key }}">{{ $value }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
             <div>
                 <a href="">
@@ -231,13 +237,13 @@
 
             <ul class="flex justify-center items-center my-4">
                 <template x-for="(tab, index) in tabs" :key="index">
-                    <li class="cursor-pointer py-3 px-4 rounded transition hover:bg-gray-50" :class="activeTab===index ? 'bg-green-600 text-white' : ' text-gray-600'" @click="activeTab = index" x-text="tab"></li>
+                    <li class="cursor-pointer py-2 px-4 text-gray-600 border-t-8 hover:bg-gray-50" :class="activeTab===index ? 'text-green-600 border-green-600' : ''" @click="activeTab = index" x-text="tab"></li>
                 </template>
             </ul>
 
             <div class="flex gap-4 justify-center border-t p-4">
-                <button class="py-2 px-4 border rounded-md border-green-600 text-green-600 cursor-pointer uppercase text-sm font-bold hover:bg-green-600 hover:text-white hover:shadow duration-700" @click="activeTab--" x-show="activeTab>0">Back</button>
-                <button class="py-2 px-4 border rounded-md border-green-600 text-green-600 cursor-pointer uppercase text-sm font-bold hover:bg-green-600 hover:text-white hover:shadow duration-700" @click="activeTab++" x-show="activeTab<tabs.length-1">Next</button>
+                <button class="py-2 px-4 border rounded-md border-green-600 text-green-600 cursor-pointer uppercase text-sm font-bold hover:bg-green-600 hover:text-white hover:shadow duration-700" @click="activeTab--" x-show="activeTab>0">前月</button>
+                <button class="py-2 px-4 border rounded-md border-green-600 text-green-600 cursor-pointer uppercase text-sm font-bold hover:bg-green-600 hover:text-white hover:shadow duration-700" @click="activeTab++" x-show="activeTab<tabs.length-1">次月</button>
             </div>
         </div>
         <!--actual component end-->

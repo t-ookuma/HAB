@@ -211,6 +211,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         'SampleConst' => App\Consts\SampleConst::class,
         'MonthlyConst' => App\Consts\MonthlyConst::class,
+        'YearConst' => App\Consts\YearConst::class,
     ])->toArray(),
 
 ];
