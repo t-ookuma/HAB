@@ -4,6 +4,7 @@
 <div class="flex min-h-screen pt-6 pb-6 items-start justify-center bg-gray-200 from-teal-100 via-teal-300 to-teal-500">
     <div class="mx-auto w-full max-w-5xl rounded-lg bg-white px-10 py-8 shadow-xl">
 
+        <!-- tab menu -->
         <div class="flex justify-center items-center">
             <div class="">
                 <a href="">
@@ -31,7 +32,7 @@
                 </a>
             </div>
         </div>
-        <!--actual component start-->
+        <!-- actual component start -->
         <div x-data="setup()">
             <ul class="flex justify-center items-center my-4">
                 <template x-for="(tab, index) in tabs" :key="index">
@@ -39,64 +40,97 @@
                 </template>
             </ul>
 
+            <!-- tab 1 -->
             <div class="bg-white mx-auto">
                 <div x-show="activeTab===0">
                     <div>
                         <div class="flex justify-center mx-w-lg">
-                            <div>
+                            <!-- Earning And Expense -->
+                            <div class="">
                                 <div class="px-5 py-4 border-b border-gray-100">
                                     <div class="flex justify-center font-semibold text-lg text-green-600">収支<span class="pl-2 allura">- Earning And Expense -</span></div>
                                 </div>
                                 <div class="overflow-x-auto p-3">
                                     <table class="table-auto w-full">
-                                        <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                                        <thead class="uppercase">
                                             <tr>
-                                                <th class="p-3">
-                                                    <div class="font-semibold text-center">収入合計</div>
+                                                <th></th>
+                                                <th class="p-3 text-xs text-gray-400 bg-gray-50">
+                                                    <div class="font-semibold text-center">金額</div>
                                                 </th>
-                                                <th class="p-3">
-                                                    <div class="font-semibold text-center">支出合計</div>
-                                                </th>
-                                                <th class="p-3">
-                                                    <div class="font-semibold text-center">収支合計</div>
-                                                </th>
-                                                <th class="p-3">
+                                                <th class="p-3 text-xs text-gray-400 bg-gray-50">
                                                     <div class="font-semibold text-center">前月比</div>
                                                 </th>
-                                                <th class="p-3">
+                                                <th class="p-3 text-xs text-gray-400 bg-gray-50">
                                                     <div class="font-semibold text-center">前年比</div>
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody class="text-sm divide-y divide-gray-100">
-                                            <!-- record 1 -->
                                             <tr>
+                                                <th class="p-3 text-xs text-gray-400 bg-gray-50">
+                                                    <div class="font-semibold text-center">収入</div>
+                                                </th>
                                                 <td class="p-3">
-                                                    <div class="font-medium text-gray-800">
+                                                    <div class="font-medium text-right text-gray-800">
                                                         1,000,000
                                                         <span>円</span>
                                                     </div>
                                                 </td>
                                                 <td class="p-3">
-                                                    <div class="font-medium text-gray-800">
-                                                        1,000,000
-                                                        <span>円</span>
-                                                    </div>
-                                                </td>
-                                                <td class="p-3">
-                                                    <div class="font-medium text-gray-800">
-                                                        1,000,000
-                                                        <span>円</span>
-                                                    </div>
-                                                </td>
-                                                <td class="p-3">
-                                                    <div class="font-medium text-gray-800">
+                                                    <div class="font-medium text-right text-gray-800">
                                                         100
                                                         <span>%</span>
                                                     </div>
                                                 </td>
                                                 <td class="p-3">
-                                                    <div class="font-medium text-gray-800">
+                                                    <div class="font-medium text-right text-gray-800">
+                                                        100
+                                                        <span>%</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="p-3 text-xs text-gray-400 bg-gray-50">
+                                                    <div class="font-semibold text-center">支出</div>
+                                                </th>
+                                                <td class="p-3">
+                                                    <div class="font-medium text-right text-gray-800">
+                                                        1,000,000
+                                                        <span>円</span>
+                                                    </div>
+                                                </td>
+                                                <td class="p-3">
+                                                    <div class="font-medium text-right text-gray-800">
+                                                        100
+                                                        <span>%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="p-3">
+                                                    <div class="font-medium text-right text-gray-800">
+                                                        100
+                                                        <span>%</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="p-3 text-xs text-gray-400 bg-gray-50">
+                                                    <div class="font-semibold text-center">収支</div>
+                                                </th>
+                                                <td class="p-3">
+                                                    <div class="font-medium text-right text-gray-800">
+                                                        1,000,000
+                                                        <span>円</span>
+                                                    </div>
+                                                </td>
+                                                <td class="p-3">
+                                                    <div class="font-medium text-right text-gray-800">
+                                                        100
+                                                        <span>%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="p-3">
+                                                    <div class="font-medium text-right text-gray-800">
                                                         100
                                                         <span>%</span>
                                                     </div>
@@ -109,6 +143,7 @@
                             </div>
                         </div>
                         <div class="flex justify-around">
+                            <!-- incomes -->
                             <div class="">
                                 <div class="px-5 py-4 border-b border-gray-100">
                                     <div class="flex justify-center font-semibold text-lg text-blue-600">収入<span class="pl-2 allura">- Incomes -</span></div>
@@ -133,7 +168,6 @@
                                             </tr>
                                         </thead>
                                         <tbody class="text-sm divide-y divide-gray-100">
-                                            <!-- record 1 -->
                                             @foreach (\SampleConst::INCOME_LIST as $value)
                                             <tr class="hover:bg-gray-50">
                                                 <td class="p-3">
@@ -151,7 +185,7 @@
                                                 <td class="p-3">
                                                     <div class="flex justify-center">
                                                         <button>
-                                                            <svg class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-white p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <svg class="w-8 h-8 text-gray-800 hover:text-blue-600 rounded-full hover:bg-white p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                                             </svg>
                                                         </button>
@@ -164,7 +198,8 @@
                                 </div>
                                 <div class="font-bold space-x-4 text-base border-t border-gray-100 px-5 py-4"></div>
                             </div>
-                            <div>
+                            <!-- Expenses -->
+                            <div class="">
                                 <div class="px-5 py-4 border-b border-gray-100">
                                     <div class="flex justify-center font-semibold text-lg text-red-600">支出<span class="pl-2 allura">- Expenses -</span></div>
                                 </div>
@@ -188,7 +223,6 @@
                                             </tr>
                                         </thead>
                                         <tbody class="text-sm divide-y divide-gray-100">
-                                            <!-- record 1 -->
                                             @foreach (\SampleConst::SPEND_LIST as $value)
                                             <tr class="hover:bg-gray-50">
                                                 <td class="p-3">
@@ -206,7 +240,7 @@
                                                 <td class="p-3">
                                                     <div class="flex justify-center">
                                                         <button>
-                                                            <svg class="w-8 h-8 hover:text-blue-600 rounded-full hover:bg-white p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <svg class="w-8 h-8 text-gray-800 hover:text-blue-600 rounded-full hover:bg-white p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                                             </svg>
                                                         </button>

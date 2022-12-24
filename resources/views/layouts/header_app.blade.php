@@ -20,11 +20,13 @@
     <!-- header -->
     <header class="z-50 header sticky top-0 bg-white shadow-xl flex items-center justify-between px-8 py-02">
 
+        <!-- header logo -->
         <h1 class="p-2">
             <img class="header-custom" src="{{ asset('images/header_logo.png') }}" alt="">
             <a href="#" class="block header-custom-text font-medium text-5xl allura text-green-600 hover:text-yellow-400 duration-700">Task Management System</a>
         </h1>
 
+        <!-- header menu -->
         <nav class="nav font-semibold text-lg">
             <ul class="flex">
                 <li class="font-medium text-sm pr-4 pt-12 pl-4 cursor-pointer">
